@@ -1,11 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on ParsiCore</title>
+    <title>Tags on ParsiCore - Build local, Think global</title>
     <link>https://parsicore.ir/tags/</link>
-    <description>Recent content in Tags on ParsiCore</description>
+    <description>Recent content in Tags on ParsiCore - Build local, Think global</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
+    <language>fa-IR</language>
+    <lastBuildDate>Tue, 23 Jul 2024 10:00:00 +0330</lastBuildDate>
     <atom:link href="https://parsicore.ir/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ParsiDate</title>
+      <link>https://parsicore.ir/tags/parsidate/</link>
+      <pubDate>Tue, 23 Jul 2024 10:00:00 +0330</pubDate>
+      <guid>https://parsicore.ir/tags/parsidate/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rust</title>
+      <link>https://parsicore.ir/tags/rust/</link>
+      <pubDate>Tue, 23 Jul 2024 10:00:00 +0330</pubDate>
+      <guid>https://parsicore.ir/tags/rust/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>برنامه نویسی</title>
+      <link>https://parsicore.ir/tags/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C/</link>
+      <pubDate>Tue, 23 Jul 2024 10:00:00 +0330</pubDate>
+      <guid>https://parsicore.ir/tags/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>تاریخ شمسی</title>
+      <link>https://parsicore.ir/tags/%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE-%D8%B4%D9%85%D8%B3%DB%8C/</link>
+      <pubDate>Tue, 23 Jul 2024 10:00:00 +0330</pubDate>
+      <guid>https://parsicore.ir/tags/%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE-%D8%B4%D9%85%D8%B3%DB%8C/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>توسعه</title>
+      <link>https://parsicore.ir/tags/%D8%AA%D9%88%D8%B3%D8%B9%D9%87/</link>
+      <pubDate>Tue, 23 Jul 2024 10:00:00 +0330</pubDate>
+      <guid>https://parsicore.ir/tags/%D8%AA%D9%88%D8%B3%D8%B9%D9%87/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

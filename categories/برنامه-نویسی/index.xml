@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ParsiCore - Build local, Think global</title>
-    <link>https://parsicore.ir/</link>
-    <description>Recent content on ParsiCore - Build local, Think global</description>
+    <title>برنامه نویسی on ParsiCore - Build local, Think global</title>
+    <link>https://parsicore.ir/categories/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C/</link>
+    <description>Recent content in برنامه نویسی on ParsiCore - Build local, Think global</description>
     <generator>Hugo</generator>
     <language>fa-IR</language>
     <lastBuildDate>Tue, 23 Jul 2024 10:00:00 +0330</lastBuildDate>
-    <atom:link href="https://parsicore.ir/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://parsicore.ir/categories/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>معرفی کتابخانه ParsiDate: مدیریت تاریخ و زمان شمسی در Rust</title>
       <link>https://parsicore.ir/parsidate/</link>
