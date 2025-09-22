@@ -2,37 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://parsicore.ir/categories/</loc>
-    <lastmod>2024-07-23T10:00:00+03:30</lastmod>
-  </url><url>
     <loc>https://parsicore.ir/</loc>
-    <lastmod>2024-07-23T10:00:00+03:30</lastmod>
-  </url><url>
-    <loc>https://parsicore.ir/tags/parsidate/</loc>
-    <lastmod>2024-07-23T10:00:00+03:30</lastmod>
-  </url><url>
-    <loc>https://parsicore.ir/categories/rust/</loc>
-    <lastmod>2024-07-23T10:00:00+03:30</lastmod>
-  </url><url>
-    <loc>https://parsicore.ir/tags/rust/</loc>
-    <lastmod>2024-07-23T10:00:00+03:30</lastmod>
-  </url><url>
-    <loc>https://parsicore.ir/tags/</loc>
-    <lastmod>2024-07-23T10:00:00+03:30</lastmod>
-  </url><url>
-    <loc>https://parsicore.ir/categories/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C/</loc>
-    <lastmod>2024-07-23T10:00:00+03:30</lastmod>
-  </url><url>
-    <loc>https://parsicore.ir/tags/%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D9%87-%D9%86%D9%88%DB%8C%D8%B3%DB%8C/</loc>
-    <lastmod>2024-07-23T10:00:00+03:30</lastmod>
-  </url><url>
-    <loc>https://parsicore.ir/tags/%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE-%D8%B4%D9%85%D8%B3%DB%8C/</loc>
-    <lastmod>2024-07-23T10:00:00+03:30</lastmod>
-  </url><url>
-    <loc>https://parsicore.ir/tags/%D8%AA%D9%88%D8%B3%D8%B9%D9%87/</loc>
-    <lastmod>2024-07-23T10:00:00+03:30</lastmod>
+    <lastmod>2025-09-23T01:06:41+03:30</lastmod>
   </url><url>
     <loc>https://parsicore.ir/parsidate/</loc>
-    <lastmod>2024-07-23T10:00:00+03:30</lastmod>
+    <lastmod>2025-09-23T01:06:41+03:30</lastmod>
+  </url><url>
+    <loc>https://parsicore.ir/categories/</loc>
+  </url><url>
+    <loc>https://parsicore.ir/tags/</loc>
   </url>
 </urlset>

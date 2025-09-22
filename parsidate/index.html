@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+            --font-size: 17.5px;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>معرفی کتابخانه ParsiDate: مدیریت تاریخ و زمان شمسی در Rust</title>
+    <meta name="description" content="ParsiDate، یک کتابخانه جامع برای مدیریت تاریخ و زمان شمسی در Rust، با قابلیت‌هایی نظیر تبدیل بین تاریخ میلادی و شمسی، محاسبات زمانی، اعتبارسنجی و پشتیبانی از …">
+    <meta name="keywords" content=''>
+
+    <meta property="og:url" content="https://parsicore.ir/parsidate/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="معرفی کتابخانه ParsiDate: مدیریت تاریخ و زمان شمسی در Rust">
+    <meta property="og:description" content="ParsiDate، یک کتابخانه جامع برای مدیریت تاریخ و زمان شمسی در Rust، با قابلیت‌هایی نظیر تبدیل بین تاریخ میلادی و شمسی، محاسبات زمانی، اعتبارسنجی و پشتیبانی از …">
+    <meta property="og:image" content="https://parsicore.ir/images/logo.png">
+    <meta property="og:image:secure_url" content="https://parsicore.ir/images/logo.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="معرفی کتابخانه ParsiDate: مدیریت تاریخ و زمان شمسی در Rust">
+    <meta name="twitter:description" content="ParsiDate، یک کتابخانه جامع برای مدیریت تاریخ و زمان شمسی در Rust، با قابلیت‌هایی نظیر تبدیل بین تاریخ میلادی و شمسی، محاسبات زمانی، اعتبارسنجی و پشتیبانی از …">
+    <meta property="twitter:domain" content="https://parsicore.ir/parsidate/">
+    <meta property="twitter:url" content="https://parsicore.ir/parsidate/">
+    <meta name="twitter:image" content="https://parsicore.ir/images/logo.png">
+
+    
+    <link rel="canonical" href="https://parsicore.ir/parsidate/">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.fdbfba1e074acb7e4abbf4c94eb19abb7702489c9689a27ee5e24a2bd481e4b7.js" integrity="sha256-/b&#43;6HgdKy35Ku/TJTrGau3cCSJyWiaJ&#43;5eJKK9SB5Lc="></script>
+
+    
+    
+</head>
+<body>
+        <script>
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://parsicore.ir/">
+                <img src='/images/logo.png' alt="avatar">
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://parsicore.ir/">ParsiCore - Build local, Think global</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://parsicore.ir/parsidate/" aria-label="" > Parsidate </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://github.com/parsicore" aria-label="" > Github </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://parsicore.ir/" aria-label="" > Home </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                <a aria-hidden="true" role="switch">
+                    <span class="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span class="sr-only hamburger-menu-toggle-screen-reader-target">menu</span>
+                <a aria-checked="false" aria-labelledby="hamburger-menu-toggle" id="hamburger-menu-toggle-target" role="switch">
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://parsicore.ir/parsidate/" > Parsidate </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://github.com/parsicore" > Github </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://parsicore.ir/" > Home </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                    <a role="switch">
+                        <span class="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    
+
+    <div class="post container">
+
+    <div class="post-header-section">
+        <h1>معرفی کتابخانه ParsiDate: مدیریت تاریخ و زمان شمسی در Rust</h1>
+    </div>
+
+    <div class="post-content">
+        <p>اگر تاکنون با زبان Rust کار کرده باشید و خواسته باشید تاریخ‌های شمسی (Jalali/Shamsi) را مدیریت کنید، احتمالاً متوجه شده‌اید که امکانات استاندارد Rust و حتی کرِیت‌های معروف مانند <code>chrono</code> بیشتر بر روی تاریخ میلادی تمرکز دارند. اینجاست که به کتابخانه <strong>ParsiDate</strong> به عنوان یک راه‌حل جامع برای مدیریت تاریخ و زمان فارسی نیاز پیدا می‌کنید.</p>
+<p>ParsiDate یک کتابخانه Rust است که امکانات گسترده‌ای برای کار با تاریخ و زمان شمسی ارائه می‌دهد. این کتابخانه نه تنها می‌تواند تاریخ‌های ساده را مدیریت کند، بلکه تبدیل بین تاریخ میلادی و شمسی، محاسبات زمانی، اعتبارسنجی و پشتیبانی از زمان‌های با منطقه زمانی را نیز فراهم می‌کند.</p>
+<h2 id="ویژگیهای-کلیدی-parsidate">ویژگی‌های کلیدی ParsiDate</h2>
+<h3 id="۱-سه-نوع-داده-اصلی">۱. سه نوع داده اصلی</h3>
+<p>کتابخانه ParsiDate سه نوع داده اصلی دارد که هرکدام کاربرد خاص خود را دارند:</p>
+<ul>
+<li><strong><code>ParsiDate</code></strong>: نمایشی ساده از تاریخ (سال، ماه، روز) بدون اطلاعات زمانی.</li>
+<li><strong><code>ParsiDateTime</code></strong>: نمایشی از تاریخ و زمان (ساعت، دقیقه، ثانیه) بدون توجه به منطقه زمانی.</li>
+<li><strong><code>ZonedParsiDateTime</code></strong>: تاریخ و زمان با توجه به منطقه زمانی، شامل پشتیبانی از تغییر ساعت تابستانی و آفست‌ها. این ویژگی نیاز به فعال‌سازی <code>timezone</code> feature دارد.</li>
+</ul>
+<h3 id="۲-تبدیل-و-تعامل-با-chrono">۲. تبدیل و تعامل با <code>chrono</code></h3>
+<p>یکی از نقاط قوت اصلی ParsiDate امکان تبدیل آسان بین تاریخ‌های میلادی (<code>NaiveDate</code>, <code>NaiveDateTime</code>) و تاریخ‌های شمسی است. این بدان معنی است که شما می‌توانید داده‌های موجود خود را بدون دردسر به تاریخ شمسی تبدیل کنید و بالعکس.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> parsidate::ParsiDate;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> chrono::NaiveDate;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> g_date <span style="color:#f92672">=</span> NaiveDate::from_ymd_opt(<span style="color:#ae81ff">2024</span>, <span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">23</span>).unwrap();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> pd <span style="color:#f92672">=</span> ParsiDate::from_gregorian(g_date).unwrap();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">assert_eq!</span>(pd.to_gregorian().unwrap(), g_date);
+</span></span></code></pre></div><h3 id="۳-اعتبارسنجی-و-ایمنی">۳. اعتبارسنجی و ایمنی</h3>
+<p>تمام تاریخ‌ها و زمان‌ها در ParsiDate به صورت دقیق اعتبارسنجی می‌شوند. برای مثال، تلاش برای ایجاد یک روز نامعتبر مانند ۳۰ اسفند در سال غیرکبیسه، خطا ایجاد می‌کند.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#a6e22e">assert!</span>(ParsiDate::new(<span style="color:#ae81ff">1404</span>, <span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">30</span>).is_err()); <span style="color:#75715e">// روز نامعتبر
+</span></span></span></code></pre></div><h3 id="۴-فرمتبندی-و-پارسینگ-پیشرفته">۴. فرمت‌بندی و پارسینگ پیشرفته</h3>
+<p>ParsiDate امکان نمایش و تبدیل تاریخ‌ها و زمان‌ها با الگوهای مشابه <code>strftime</code> را فراهم می‌کند. شما می‌توانید از نام‌های فارسی ماه‌ها، روزهای هفته، فصل‌ها و تمام اجزای تاریخ و زمان استفاده کنید.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> pd <span style="color:#f92672">=</span> ParsiDate::new(<span style="color:#ae81ff">1403</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2</span>).unwrap();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">assert_eq!</span>(pd.format(<span style="color:#e6db74">&#34;%d %B %Y&#34;</span>), <span style="color:#e6db74">&#34;02 مرداد 1403&#34;</span>);
+</span></span></code></pre></div><p>همچنین، پارس کردن رشته‌ها به تاریخ شمسی با فرمت‌های مختلف به آسانی ممکن است:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> parsed <span style="color:#f92672">=</span> ParsiDate::parse(<span style="color:#e6db74">&#34;1403/05/02&#34;</span>, <span style="color:#e6db74">&#34;%Y/%m/%d&#34;</span>).unwrap();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">assert_eq!</span>(parsed, pd);
+</span></span></code></pre></div><h3 id="۵-محاسبات-زمانی-arithmetic">۵. محاسبات زمانی (Arithmetic)</h3>
+<p>ParsiDate امکان جمع و تفریق روزها، ماه‌ها و سال‌ها را با در نظر گرفتن طول ماه‌ها و سال‌های کبیسه فراهم می‌کند. همچنین با استفاده از <code>chrono::Duration</code> می‌توان محاسبات دقیق زمان را انجام داد.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> pd <span style="color:#f92672">=</span> ParsiDate::new(<span style="color:#ae81ff">1403</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2</span>).unwrap();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> next_day <span style="color:#f92672">=</span> pd.add_days(<span style="color:#ae81ff">1</span>).unwrap(); <span style="color:#75715e">// اضافه کردن یک روز
+</span></span></span></code></pre></div><h3 id="۶-اطلاعات-کامل-تاریخ-و-زمان">۶. اطلاعات کامل تاریخ و زمان</h3>
+<p>کتابخانه امکانات متنوعی برای استخراج اطلاعات از تاریخ‌ها فراهم کرده است:</p>
+<ul>
+<li>روز هفته شمسی</li>
+<li>روز سال</li>
+<li>فصل</li>
+<li>شماره هفته</li>
+<li>اجزای تاریخ و زمان (سال، ماه، روز، ساعت، دقیقه، ثانیه)</li>
+</ul>
+<p>همچنین امکان دریافت اولین و آخرین روز ماه، سال و فصل وجود دارد.</p>
+<h3 id="۷-پشتیبانی-از-زمان-واقعی-سیستم">۷. پشتیبانی از زمان واقعی سیستم</h3>
+<ul>
+<li><code>ParsiDate::today()</code> – دریافت تاریخ امروز شمسی</li>
+<li><code>ParsiDateTime::now()</code> – دریافت تاریخ و زمان کنونی</li>
+<li><code>ZonedParsiDateTime::now(tz)</code> – دریافت زمان کنونی با منطقه زمانی</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> parsidate::ParsiDateTime;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> now <span style="color:#f92672">=</span> ParsiDateTime::now();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">println!</span>(<span style="color:#e6db74">&#34;Current ParsiDateTime: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, now);
+</span></span></code></pre></div><h3 id="۸-پشتیبانی-از-سریالسازی-serde">۸. پشتیبانی از سریال‌سازی (Serde)</h3>
+<p>با فعال کردن <code>serde</code> feature، تمامی نوع‌های تاریخ و زمان می‌توانند سریال‌سازی و دی‌سریال‌سازی شوند که برای ذخیره‌سازی یا ارسال داده‌ها بسیار مفید است.</p>
+<h2 id="نصب-و-فعالسازی-امکانات">نصب و فعال‌سازی امکانات</h2>
+<p>برای اضافه کردن ParsiDate به پروژه Rust کافیست <code>Cargo.toml</code> را به شکل زیر تنظیم کنید:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">dependencies</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">parsidate</span> = <span style="color:#e6db74">&#34;1.7.1&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">chrono</span> = <span style="color:#e6db74">&#34;0.4&#34;</span>
+</span></span></code></pre></div><p>فعال‌سازی ویژگی‌های اضافی:</p>
+<ul>
+<li><code>serde</code> – سریال‌سازی و دی‌سریال‌سازی</li>
+<li><code>timezone</code> – پشتیبانی از <code>ZonedParsiDateTime</code> و مناطق زمانی</li>
+</ul>
+<p>مثال:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">parsidate</span> = { <span style="color:#a6e22e">version</span> = <span style="color:#e6db74">&#34;1.7.1&#34;</span>, <span style="color:#a6e22e">features</span> = [<span style="color:#e6db74">&#34;serde&#34;</span>, <span style="color:#e6db74">&#34;timezone&#34;</span>] }
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">chrono-tz</span> = <span style="color:#e6db74">&#34;0.8&#34;</span>  <span style="color:#75715e"># مورد نیاز برای timezone</span>
+</span></span></code></pre></div><h2 id="مثالهای-کاربردی">مثال‌های کاربردی</h2>
+<h3 id="ایجاد-و-مدیریت-تاریخ-شمسی">ایجاد و مدیریت تاریخ شمسی</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> parsidate::ParsiDate;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> pd <span style="color:#f92672">=</span> ParsiDate::new(<span style="color:#ae81ff">1403</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2</span>).unwrap();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">println!</span>(<span style="color:#e6db74">&#34;تاریخ شمسی: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, pd.format(<span style="color:#e6db74">&#34;%d %B %Y&#34;</span>));
+</span></span></code></pre></div><h3 id="محاسبات-زمانی">محاسبات زمانی</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">let</span> pd <span style="color:#f92672">=</span> ParsiDate::new(<span style="color:#ae81ff">1403</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">2</span>).unwrap();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> tomorrow <span style="color:#f92672">=</span> pd.add_days(<span style="color:#ae81ff">1</span>).unwrap();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">println!</span>(<span style="color:#e6db74">&#34;فردا: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, tomorrow);
+</span></span></code></pre></div><h3 id="مدیریت-زمان-با-منطقه-زمانی">مدیریت زمان با منطقه زمانی</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#75715e">#[cfg(feature = </span><span style="color:#e6db74">&#34;timezone&#34;</span><span style="color:#75715e">)]</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">use</span> parsidate::ZonedParsiDateTime;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">use</span> chrono_tz::Asia::Tehran;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> tehran_now <span style="color:#f92672">=</span> ZonedParsiDateTime::now(Tehran);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">println!</span>(<span style="color:#e6db74">&#34;زمان فعلی تهران: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, tehran_now);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="دریافت-فصل-و-محدوده-آن">دریافت فصل و محدوده آن</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> parsidate::{ParsiDate, Season};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> winter_date <span style="color:#f92672">=</span> ParsiDate::new(<span style="color:#ae81ff">1403</span>, <span style="color:#ae81ff">11</span>, <span style="color:#ae81ff">10</span>).unwrap();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">assert_eq!</span>(winter_date.season().unwrap(), Season::Zemestan);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">let</span> end_of_winter <span style="color:#f92672">=</span> winter_date.end_of_season().unwrap();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">println!</span>(<span style="color:#e6db74">&#34;پایان زمستان: </span><span style="color:#e6db74">{}</span><span style="color:#e6db74">&#34;</span>, end_of_winter);
+</span></span></code></pre></div><h2 id="جمعبندی">جمع‌بندی</h2>
+<p>کتابخانه ParsiDate یک ابزار کامل و حرفه‌ای برای کار با تاریخ و زمان شمسی در Rust است. این کتابخانه برای برنامه‌نویسانی که می‌خواهند:</p>
+<ul>
+<li>تاریخ شمسی را با دقت و اعتبار بالا مدیریت کنند،</li>
+<li>محاسبات زمانی پیچیده را انجام دهند،</li>
+<li>و با تاریخ میلادی و مناطق زمانی تعامل داشته باشند،</li>
+</ul>
+<p>یک راه‌حل بسیار مطمئن و کاربردی محسوب می‌شود.</p>
+<p>با توجه به پشتیبانی از <code>serde</code>، امکانات فرمت‌بندی، پارسینگ، و محاسبات دقیق زمان، ParsiDate می‌تواند هسته‌ی سیستم‌های تاریخ و زمان فارسی را در پروژه‌های Rust شما تشکیل دهد.</p>
+<h2 id="دسترسی">دسترسی</h2>
+<ul>
+<li>
+<p><strong>صفحه ی parsidate در crates.io</strong>:
+<a href="https://crates.io/crates/parsidate">https://crates.io/crates/parsidate</a></p>
+</li>
+<li>
+<p><strong>صفحه ی parsidate در lib.rs</strong>:
+<a href="https://lib.rs/crates/parsidate">https://lib.rs/crates/parsidate</a></p>
+</li>
+<li>
+<p><strong>صفحه ی مستندات parsidate در docs.rs</strong>:
+<a href="https://docs.rs/parsidate">https://docs.rs/parsidate</a></p>
+</li>
+<li>
+<p><strong>WiKi</strong>:
+<a href="https://github.com/parsicore/ParsiDate/wiki">https://github.com/parsicore/ParsiDate/wiki</a></p>
+</li>
+<li>
+<p><strong>آخرین تغییرات</strong>:
+<a href="https://github.com/parsicore/ParsiDate/blob/master/CHANGELOG.md">https://github.com/parsicore/ParsiDate/blob/master/CHANGELOG.md</a></p>
+</li>
+</ul>
+
+    </div>
+    
+    
+</div>
+
+
+
+
+        </main><footer class="footer">
+    
+    
+
+    
+
+    
+
+    
+
+    <span>
+        Made with &#10084;&#65039; ParsiCore 2025
+    </span>
+</footer></body>
+</html>
